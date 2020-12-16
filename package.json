@@ -18,13 +18,16 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start:prettier:watch": "npm-run-all -l -p start prettier:watch",
+    "dev": "npm-run-all -n -p start prettier:watch stylelint:watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier:watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
-    "stylelint-check": "stylelint-config-prettier-check"
+    "stylelint-check": "stylelint-config-prettier-check",
+    "stylelint": "stylelint \"**/*.{css,scss,sass}\"",
+    "eslint": "eslint --ext .jsx,.js,.ts,.tsx src/",
+    "stylelint:watch": "onchange \"**/*.{css,scss,sass}\" -- npm run stylelint"
   },
   "browserslist": {
     "production": [
@@ -46,11 +49,13 @@
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "stylelint": "^13.8.0",
-    "stylelint-config-prettier": "^8.0.2"
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^3.0.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "npm run stylelint && npm run eslint"
     }
   }
 }
