@@ -41,5 +41,7 @@ module.exports = {
   },
 };
 ```
-2. 
-
+2. There is an option to auto format code with prettier on file changes. In case you don't want to use a code editor or install a plugin.
+```
+ "prettier:watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+```
