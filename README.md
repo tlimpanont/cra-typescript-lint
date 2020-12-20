@@ -46,6 +46,7 @@ module.exports = {
  "start:auto:format": "npm-run-all -n -p prettier:watch start",
 ```
 with no .prettierrc configured the default is: http://json.schemastore.org/prettierrc
+
 3. ESLint by default does not take the TypeScript language in consideration. We added TypeScript parser and config to the .eslintrc.
 ```
 
