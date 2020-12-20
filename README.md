@@ -74,10 +74,10 @@ module.exports = {
 - Turns off all ESLint and StyleLint rules that are unnecessary or might conflict with Prettier.
 - Creating a shareable lint and format config files for [ESLint](https://eslint.org/docs/developer-guide/shareable-configs), [Prettier](https://prettier.io/docs/en/configuration.html#sharing-configurations) and [StyleLint](https://stylelint.io/user-guide/configure#extends)
 
-For Example: 
-- Eslint Config (@rfh/eslint-config)
-- Prettier Config (@rfh/prettier-config)
-- StyleLint Config (@rfh/stylelint-config)
+For Example:
+- Eslint Config require('@theuybv/configs').eslint
+- Prettier Config require('@theuybv/config').prettier
+- StyleLint Config require('@theuybv/config').stylelint
 
 ### Optional enhancements
 1. To format our staged code (not all the code in the source but only the one that has been `git add`ed) whenever we make a commit in git, use [pretty-quick](https://github.com/azz/pretty-quick) and [husky](https://github.com/azz/pretty-quick#pre-commit-hook) pre-commit hook
