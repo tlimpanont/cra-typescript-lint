@@ -83,6 +83,20 @@ For Example:
 1. To format our staged code (not all the code in the source but only the one that has been `git add`ed) whenever we make a commit in git, use [pretty-quick](https://github.com/azz/pretty-quick) and [husky](https://github.com/azz/pretty-quick#pre-commit-hook) pre-commit hook
 2. (Re)Check the code before pushing to the remote server. `"pre-push": "npm run stylelint && npm run eslint"`.
 
+``` bash
+npm i --save-dev husky pretty-quick
+```
+add this to your **package.json** file
+
+```json
+ "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "npm run stylelint && npm run eslint"
+    }
+  }
+```
+
 Both two optional enhancements feels little bit redundant, but this would be a good option when you want to (re)check the code without the use of `npm start | npm start:auto:format` or Editor **Format On Save** feature. e.g. code change via terminal.
 
 3. We can choose to npm start the project with prettier auto-formatting feature enabled on file changes. In case you don't want to use a code editor or install a plugin.
