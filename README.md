@@ -78,7 +78,7 @@ with no .prettierrc configured the default is: http://json.schemastore.org/prett
 1. To format our staged code (not all the code in the source but only the one that has been `git add`ed) whenever we make a commit in git, use [pretty-quick](https://github.com/azz/pretty-quick) and [husky](https://github.com/azz/pretty-quick#pre-commit-hook) pre-commit hook
 2. (Re)Check the code before pushing to the remote server. `"pre-push": "npm run stylelint && npm run eslint"`.
 
-Both two optional enhancements feels little bit redundant, but this would a good option when you want to check the code written without the use of `npm start | npm start:auto:format` or Editors **Format On Save** feature. e.g. code change via terminal.
+Both two optional enhancements feels little bit redundant, but this would a good option when you want to check the code written without the use of `npm start | npm start:auto:format` or Editors **Format On Save** feature. e.g. code change via terminal. Please install Prettier plugin for your editor. 
 
 # The final recommendation
 - Displaying Lint output in your editor by installing and enabling ESLint and StyLint plugins.
