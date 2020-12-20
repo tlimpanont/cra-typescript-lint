@@ -72,7 +72,7 @@ module.exports = {
 - Displaying Lint output in your editor by installing and enabling ESLint and StyLint plugins.
 - Let your editor do the auto-format work by enabling the feature: **Format On Save**. Remember that the auto-format engine must be Prettier! Please install Prettier plugin for your editor. 
 - Turns off all ESLint and StyleLint rules that are unnecessary or might conflict with Prettier.
-- Creating a shareable lint and format config files [ESLint](https://eslint.org/docs/developer-guide/shareable-configs) [Prettier](https://prettier.io/docs/en/configuration.html#sharing-configurations) and [StyleLint](https://stylelint.io/user-guide/configure#extends)
+- Creating a shareable lint and format config files for [ESLint](https://eslint.org/docs/developer-guide/shareable-configs), [Prettier](https://prettier.io/docs/en/configuration.html#sharing-configurations) and [StyleLint](https://stylelint.io/user-guide/configure#extends)
 
 For Example: 
 - Eslint Config (@rfh/eslint-config)
