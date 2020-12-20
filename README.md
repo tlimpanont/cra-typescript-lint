@@ -1,7 +1,7 @@
 A great foundation that enriches the TypeScript "create react app" project with best practices from eslint, prettier and stylelint. There is a "watch" mode on the npm start operation so you don't have to install formatting / linting plugins for your code editor.
 
 # Motivation
-We as developers strive to write the best software codes. This code contains as few bugs as possible and is easy to extend and maintain. It is good practice to adhere to certain guidelines for writing code in a software development project.
+We as developers strive to write the best software codes. This code contains as few bugs as possible and is easy to extend and maintain. It is a good practice to adhere to certain guidelines for writing code in a software development project.
 
 ## Goals
 
