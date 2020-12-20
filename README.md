@@ -30,7 +30,7 @@ It is good to emphasize that **Prettier is for formatting** and **linters are fo
 
 **craco.config.js**
 
-```
+```javascript
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const StylelintPlugin = require("stylelint-webpack-plugin");
 
@@ -42,13 +42,13 @@ module.exports = {
 };
 ```
 2. We can choose to npm start the project with prettier auto-formatting feature enabled on file changes. In case you don't want to use a code editor or install a plugin.
-```
+```bash
  "start:auto:format": "npm-run-all -n -p prettier:watch start",
 ```
 with no .prettierrc configured the default is: http://json.schemastore.org/prettierrc
 
 3. ESLint by default does not take the TypeScript language in consideration. We added TypeScript parser and config to the .eslintrc.
-```
+```json
 
 {
   "parser": "@typescript-eslint/parser",
@@ -65,7 +65,7 @@ with no .prettierrc configured the default is: http://json.schemastore.org/prett
 ```
 4. Turns off all ESLint rules that are unnecessary or might conflict with Prettier. (https://github.com/prettier/eslint-config-prettier)
 5. Turns off all StyleLint rules that are unnecessary or might conflict Prettier. (https://github.com/prettier/stylelint-config-prettier)
-```
+```json
 {
   "extends": [
     "stylelint-config-recommended",
