@@ -25,7 +25,7 @@ Source: https://prettier.io/docs/en/comparison.html
 
 It is good to emphasize that **Prettier is for formatting** and **linters are for catching bugs!**. The command `eslint --fix` is replaced by the Prettier command: `prettier --write`.
 
-### The enhancements
+### The recommended enhancements
 1. Unfortunately, the npm start (ES)Lint terminal output is limited to eslint functionalities. In addition to the standard CRA project, a [StyleLint](https://stylelint.io/) terminal output has also been configured. To do this we need to extend the built-in Webpack configuration. We can easily do this with [CRACO](https://github.com/gsoft-inc/craco). 
 
 **craco.config.js**
@@ -73,3 +73,15 @@ with no .prettierrc configured the default is: http://json.schemastore.org/prett
   ]
 }
 ```
+
+### Optional enhancements
+1. To format our staged code (not all the code in the source but only the one that has been `git add`ed) whenever we make a commit in git, use [pretty-quick](https://github.com/azz/pretty-quick) and [husky](https://github.com/azz/pretty-quick#pre-commit-hook) pre-commit hook
+2. (Re)Check the code before pushing to the remote server. `"pre-push": "npm run stylelint && npm run eslint"`.
+
+Both two optional enhancements feels little bit redundant, but this would a good option when you want to check the code written without the use of `npm start | npm start:auto:format` or Editors **Format On Save** feature. e.g. code change via terminal.
+
+# The final recommendation
+- Displaying Lint output in your editor by installing and enabling ESLint and StyLint plugins.
+- Let your editor do the auto-format work by enabling the feature: **Format On Save**. Remember that the auto-format engine must be Prettier!
+- Turns off all ESLint and StyleLint rules that are unnecessary or might conflict with Prettier.
+- Creating a shareable lint and format config files [ESLint](https://eslint.org/docs/developer-guide/shareable-configs) [Prettier](https://prettier.io/docs/en/configuration.html#sharing-configurations) and [StyleLint](https://stylelint.io/user-guide/configure#extends)
