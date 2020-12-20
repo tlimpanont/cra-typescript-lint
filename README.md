@@ -85,3 +85,8 @@ Both two optional enhancements feels little bit redundant, but this would a good
 - Let your editor do the auto-format work by enabling the feature: **Format On Save**. Remember that the auto-format engine must be Prettier!
 - Turns off all ESLint and StyleLint rules that are unnecessary or might conflict with Prettier.
 - Creating a shareable lint and format config files [ESLint](https://eslint.org/docs/developer-guide/shareable-configs) [Prettier](https://prettier.io/docs/en/configuration.html#sharing-configurations) and [StyleLint](https://stylelint.io/user-guide/configure#extends)
+
+For Example: 
+- Eslint Config (@rfh/eslint-config)
+- Prettier Config (@rfh/prettier-config)
+- StyleLint Config (@rfh/stylelint-config)
