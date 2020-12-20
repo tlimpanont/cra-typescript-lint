@@ -46,3 +46,29 @@ module.exports = {
  "start:auto:format": "npm-run-all -n -p prettier:watch start",
 ```
 with no .prettierrc configured the default is: http://json.schemastore.org/prettierrc
+3. ESLint by default does not take the TypeScript language in consideration. We added TypeScript parser and config to the .eslintrc.
+```
+
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ]
+}
+
+```
+4. Turns off all ESLint rules that are unnecessary or might conflict with Prettier. (https://github.com/prettier/eslint-config-prettier)
+5. Turns off all StyleLint rules that are unnecessary or might conflict Prettier. (https://github.com/prettier/stylelint-config-prettier)
+```
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-prettier"
+  ]
+}
+```
