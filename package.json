@@ -19,7 +19,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start:prettier:watch": "npm-run-all -n -p start prettier:watch",
+    "start:auto:format": "npm-run-all -n -p prettier:watch start",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
