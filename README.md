@@ -43,5 +43,5 @@ module.exports = {
 ```
 2. We can choose to npm start the project with prettier auto-formatting feature enabled on file changes. In case you don't want to use a code editor or install a plugin.
 ```
-"start:prettier:watch": "npm-run-all -n -p start prettier:watch",
+ "start:auto:format": "npm-run-all -n -p prettier:watch start",
 ```
