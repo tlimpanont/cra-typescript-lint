@@ -41,13 +41,7 @@ module.exports = {
   },
 };
 ```
-2. We can choose to npm start the project with prettier auto-formatting feature enabled on file changes. In case you don't want to use a code editor or install a plugin.
-```bash
- "start:auto:format": "npm-run-all -n -p prettier:watch start",
-```
-with no .prettierrc configured the default is: http://json.schemastore.org/prettierrc
-
-3. ESLint by default does not take the TypeScript language in consideration. We added TypeScript parser and config to the .eslintrc.
+2. ESLint by default does not take the TypeScript language in consideration. We added TypeScript parser and config to the .eslintrc.
 ```json
 
 {
@@ -63,8 +57,8 @@ with no .prettierrc configured the default is: http://json.schemastore.org/prett
 }
 
 ```
-4. Turns off all ESLint rules that are unnecessary or might conflict with Prettier. (https://github.com/prettier/eslint-config-prettier)
-5. Turns off all StyleLint rules that are unnecessary or might conflict Prettier. (https://github.com/prettier/stylelint-config-prettier)
+3. Turns off all ESLint rules that are unnecessary or might conflict with Prettier. (https://github.com/prettier/eslint-config-prettier)
+4. Turns off all StyleLint rules that are unnecessary or might conflict Prettier. (https://github.com/prettier/stylelint-config-prettier)
 ```json
 {
   "extends": [
@@ -90,3 +84,9 @@ For Example:
 2. (Re)Check the code before pushing to the remote server. `"pre-push": "npm run stylelint && npm run eslint"`.
 
 Both two optional enhancements feels little bit redundant, but this would be a good option when you want to (re)check the code without the use of `npm start | npm start:auto:format` or Editor **Format On Save** feature. e.g. code change via terminal.
+
+3. We can choose to npm start the project with prettier auto-formatting feature enabled on file changes. In case you don't want to use a code editor or install a plugin.
+```bash
+ "start:auto:format": "npm-run-all -n -p prettier:watch start",
+```
+with no .prettierrc configured the default is: http://json.schemastore.org/prettierrc
