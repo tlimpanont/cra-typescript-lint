@@ -41,7 +41,7 @@ module.exports = {
   },
 };
 ```
-2. There is an option to auto format code with prettier on file changes. In case you don't want to use a code editor or install a plugin.
+2. We can choose to npm start the project with prettier auto-formatting feature enabled on file changes. In case you don't want to use a code editor or install a plugin.
 ```
- "prettier:watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+"start:prettier:watch": "npm-run-all -n -p start prettier:watch",
 ```
