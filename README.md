@@ -23,7 +23,7 @@ Source: https://prettier.io/docs/en/comparison.html
 ## TypeScript Create React App
 [Create React App](https://github.com/facebook/create-react-app) uses ESLint as a code linting tool. We can extend the config or override the linting rules as documented here: https://create-react-app.dev/docs/setting-up-your-editor/
 
-It is good to emphasize that **Prettier is for formatting** and **linters are for catching bugs!**. The command `eslint --fix` is replaced by the Prettier command: `prettier --write`.
+It is good to emphasize that **Prettier is for formatting** and **linters are for catching bugs!**. Please use `prettier --write` to auto-format your code based on the tylistic rules. `eslint --fix` should not be used to solve this. (https://eslint.org/docs/rules/#stylistic-issues) 
 
 ### The recommended enhancements
 1. Unfortunately, the npm start (ES)Lint terminal output is limited to eslint functionalities. In addition to the standard CRA project, a [StyleLint](https://stylelint.io/) terminal output has also been configured. To do this we need to extend the built-in Webpack configuration. We can easily do this with [CRACO](https://github.com/gsoft-inc/craco). 
@@ -67,6 +67,7 @@ module.exports = {
   ]
 }
 ```
+5. Don't use `eslint --fix` to auto-fix your code without knowing what your're auto-fixing. It's better to manually fix the issues based on the recommendation you see in the lint output terminal. We should understand the issues and learn how to fix it.  In addition, most auto-fix `eslint --fix` issues are often stylistic which are already solved by prettier.
 
 # The final recommendation
 - Displaying Lint output in your editor by installing and enabling ESLint and StyLint plugins.
